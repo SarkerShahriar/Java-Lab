@@ -1,0 +1,61 @@
+package constructor101;
+
+import java.util.Scanner;
+
+public class Constructor101 {
+
+    public static void main(String[] args) 
+    {
+        Scanner myscanner=new Scanner(System.in);
+        Account Firstaccount=new Account("Anido", "2008", 5000.00);
+        double afterDeposit=Firstaccount.deposit(55000.00);
+        System.out.println(afterDeposit);
+        double afterWithdraw=Firstaccount.withdraw(2000.00);
+        System.out.println(afterWithdraw);
+        System.out.println("Current Balance"+Firstaccount.balance);
+        
+    }
+    
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+package constructor101;
+
+public class Account 
+{
+    public String Name;
+    public String AccId;
+    public double balance;
+
+public Account(String N, String Acc, Double B)
+{
+    Name=N;
+    AccId=Acc;
+    balance=B;
+}
+
+public double deposit(double amount)
+{
+    balance=balance+amount;
+    return balance;
+}
+
+public double withdraw(double amount)
+{
+    balance=balance-amount;
+    return balance;
+}
+        
+}
